@@ -1,0 +1,47 @@
+ejercicio 3:
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // 1.  variables
+    string nombre;
+    int edad;
+    string carrera;
+    int semestre;
+    double promedio; // Usar double para el tipo "Real" (números decimales)
+
+    // 2. pedir datos
+    cout << "Ingrese nombre del estudiante: ";
+    cin >> nombre;
+
+    cout << "Ingrese edad: ";
+    cin >> edad;
+
+    cout << "Ingrese carrera: ";
+    cin >> carrera;
+
+    cout << "Ingrese semestre: ";
+    cin >> semestre;
+
+    cout << "Ingrese promedio final: ";
+    cin >> promedio;
+
+    // 3. Mostrar datos
+    cout << "\n- RESUMEN DEL ESTUDIANTE -" << endl;
+    cout << "Nombre: " << nombre << endl;
+    cout << "Edad: " << edad << endl;
+    cout << "Carrera: " << carrera << endl;
+    cout << "Semestre: " << semestre << endl;
+    cout << "Promedio: " << promedio << endl;
+
+    // 4. aprueba o reprueba (promedio >= 51)
+    if (promedio >= 51) {
+        cout << "El estudiante aprobo" << endl;
+    } else {
+        cout << "El estudiante reprobo" << endl;
+    }
+
+    return 0;
+}
