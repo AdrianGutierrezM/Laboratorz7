@@ -1,0 +1,30 @@
+ejercicio 1:
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+int edad,semestre;
+string nombre, carrera;
+cout<< "Nombre del estudiante: ";
+cin>> nombre;
+
+cout<< "Edad del estudiante: ";
+cin>> edad;
+
+cout<< "Semestre en el que se encuentra el estudiante: ";
+cin>> semestre;
+
+cout << "Carrera del estudiante: ";
+cin>> carrera;
+
+
+
+
+cout<< "El Nombre del estudiante es: " << nombre << endl;
+cout<< "La Edad del estudiante es: " << edad << endl;
+cout<< "El Semestre en el que se encuentra es: " << semestre << endl;
+cout<< "La Carrera del estudiante es: " << carrera << endl;
+
+return 0;
+}
