@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string nombre_cliente;
+    string empresa;
+    double consumo_m3;
+    double monto_fijo = 10.0;
+    double precio_por_m3 = 0.0;
+    double total_a_pagar = 0.0;
+    string categoria = "";
+
+    // datos
+    cout << "ingrese el nombre del cliente: ";
+    getline(cin, nombre_cliente);
+    
+    cout << "ingrese el nombre de la empresa: ";
+    getline(cin, empresa);
+    
+
+    cout << "ingrese el consumo en m3: ";
+    cin >> consumo_m3;
+    
+
+    // estructura condicional
+    if (consumo_m3 > 0 && consumo_m3 <= 15) {
+        precio_por_m3 = 1.20;
+        categoria = "consumo minimo";
+    } else if (consumo_m3 > 15 && consumo_m3 <= 35) {
+        precio_por_m3 = 2.50;
+        categoria = "consumo domestico";
+    } else if (consumo_m3 > 35 && consumo_m3 <= 70) {
+        precio_por_m3 = 4.00;
+        categoria = "consumo comercial";
+    } else if (consumo_m3 > 70) {
+        precio_por_m3 = 6.50;
+        categoria = "consumo alto / industrial";
+    } else {
+        cout << "consumo no valido." << endl;
+        return 1; // termina el programa si hay un error
+    }
+
+    // calculo
+    total_a_pagar = monto_fijo + (consumo_m3 * precio_por_m3);
+
+    // resultados
+    cout << "\n- detalle de factura -" << endl;
+    cout << "nombre de la empresa: " << empresa << endl;
+    cout << "cliente: " << nombre_cliente << endl;
+    cout << "categoria asignada: " << categoria << endl;
+    cout << "monto fijo a pagar: Bs " << monto_fijo << endl;
+    cout << "pago total: Bs " << total_a_pagar << endl;
+
+    return 0;
+}
