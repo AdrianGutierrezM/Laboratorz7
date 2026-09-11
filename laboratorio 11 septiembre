@@ -1,0 +1,84 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+char opcion;
+float peso;
+float costo;
+
+do
+{
+cout << "\n===== SISTEMA DE ENVIOS =====" << endl;
+cout << "L - La Paz / El Alto" << endl;
+cout << "C - Cochabamba" << endl;
+cout << "S - Santa Cruz" << endl;
+cout << "X - Salir" << endl;
+cout << "Ingrese una opcion: ";
+cin >> opcion;
+
+switch(opcion)
+{
+case 'L':
+case 'l':
+cout << "Ingrese el peso del paquete en Kg: ";
+cin >> peso;
+
+costo = 7;
+
+if(peso > 2)
+{
+costo = costo + (peso - 2) * 3;
+}
+
+cout << "cestino: La Paz / El Alto" << endl;
+cout << "costo del envio: Bs " << costo << endl;
+break;
+
+case 'C':
+case 'c':
+cout << "ingrese el peso del paquete en Kg: ";
+cin >> peso;
+
+costo = 5;
+
+if(peso > 2)
+{
+costo = costo + (peso - 2) * 2;
+}
+
+cout << "destino: Cochabamba" << endl;
+cout << "costo del envio: Bs " << costo << endl;
+break;
+
+case 'S':
+case 's':
+cout << "ingrese el peso del paquete en Kg: ";
+cin >> peso;
+
+costo = 8;
+
+if(peso > 2)
+{
+costo = costo + (peso - 2) * 4;
+}
+
+cout << "destino: Santa Cruz" << endl;
+cout << "costo del envio: Bs " << costo << endl;
+break;
+
+case 'X':
+case 'x':
+cout << "Saliendo del sistema.." << endl;
+break;
+
+default:
+cout << "opcion no valida" << endl;
+}
+
+} while(opcion != 'X' && opcion != 'x');
+
+return 0;
+}
