@@ -11,7 +11,7 @@ float costo;
 
 do
 {
-cout << "\n===== SISTEMA DE ENVIOS =====" << endl;
+cout << "\n=--- SISTEMA DE ENVIOS ---" << endl;
 cout << "L - La Paz / El Alto" << endl;
 cout << "C - Cochabamba" << endl;
 cout << "S - Santa Cruz" << endl;
