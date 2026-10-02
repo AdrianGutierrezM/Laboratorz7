@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+int N;
+
+//
+do {
+cout << "Ingrese un numero entero positivo N: ";
+cin >> N;
+if (N <= 0) {
+cout << "El numero debe ser mayor que 0. Intente nuevamente.\n";
+}
+} while (N <= 0);
+
+double S = 0.0;
+
+// calcular la suma de la serie
+for (int i = 1; i <= N; i++) {
+S += 1.0 / i; // Se usa 1.0 para forzar la división con decimales
+}
+
+//resultado final
+cout << fixed << setprecision(4);
+cout << "\nEl resultado de la suma S es: " << S << endl;
+
+return 0;
+}
