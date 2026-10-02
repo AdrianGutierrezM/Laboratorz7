@@ -1,0 +1,46 @@
+#include <iostream>
+#include <iomanìp>
+using namespace std;
+
+int main() {
+double combustibleRestante = 50.0; 
+double totalConsumido = 0.0;
+double consumoEntrega = 0.0;
+int entregas = 0;
+
+cout << "= control de Combustible - vehiculo de Reparto =\n\n";
+
+// bucle
+while (combustibleRestante > 10.0) {
+cout << "combustible disponible: " << fixed << setprecision(2) << combustibleRestante << " L\n";
+cout << "ingrese la cantidad de litros consumidos en la entrega #" << (entregas + 1) << ": ";
+cin >> consumoEntrega;
+
+// validar
+if (consumoEntrega <= 0) {
+cout << "el consumo debe ser mayor a 0 litros. Intente nuevamente.\n\n";
+continue;
+}
+
+if (consumoEntrega > combustibleRestante) {
+cout << "el consumo no puede ser mayor al combustible disponible. Intente nuevamente.\n\n";
+continue;
+}
+
+// actualizacion
+combustibleRestante -= consumoEntrega;
+totalConsumido += consumoEntrega;
+entregas++;
+cout << endl;
+}
+
+// resultados
+cout << "REGISTRO DETENIDO\n";
+cout << "----------------------------------------\n";
+cout << "cantidad de entregas realizadas: " << entregas << endl;
+cout << "total de combustible consumido: " << fixed << setprecision(2) << totalConsumido << " L" << endl;
+cout << "combustible restante: " << fixed << setprecision(2) << combustibleRestante << " L" << endl;
+cout << "mensaje: Debe cargar combustible" << endl;
+
+return 0;
+}
