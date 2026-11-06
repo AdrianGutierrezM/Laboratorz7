@@ -1,0 +1,52 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+long long N, aux;
+
+// 
+do {
+cout << "Ingrese un numero entero positivo N: ";
+cin >> N;
+if (N <= 0) {
+cout << "El numero debe ser un entero positivo (mayor a 0). Intente nuevamente.\n";
+}
+} while (N <= 0);
+
+// 
+
+int cantidadTotalDigitos = 0;
+int cantidadMayoresA5 = 0;
+int sumaMayoresA5 = 0;
+
+// 
+while (aux > 0) {
+//
+int digito = aux % 10;
+
+// 
+cantidadTotalDigitos++;
+
+//
+if (digito > 5) {
+// 
+cantidadMayoresA5++;
+sumaMayoresA5 += digito;
+}
+
+//
+aux /= 10;
+}
+
+//
+cout << "\n----------------------------------------\n";
+cout << "RESULTADOS DEL ANALISIS DE DIGITOS\n";
+cout << "----------------------------------------\n";
+cout << "cantidad total de digitos: " << cantidadTotalDigitos << endl;
+cout << "cantidad de digitos mayores a 5: " << cantidadMayoresA5 << endl;
+cout << "suma de los digitos mayores a 5: " << sumaMayoresA5 << endl;
+
+return 0;
+}
+
