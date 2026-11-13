@@ -1,27 +1,26 @@
-#include #include
+#include <iostream>
+#include <string>
 using namespace std;
 
 int BuscarSubCadena(string a, string b) {
 int tamA = a.length();
 int tamB = b.length();
 
-// Si la subcadena es más grande que la cadena principal, no puede estar adentro
 if (tamA > tamB) {
 return -1;
 }
 
-// Recorremos la cadena b extrayendo partes del mismo tamaño que a
 for (int i = 0; i <= tamB - tamA; i++) {
 if (b.substr(i, tamA) == a) {
-return i; // Devuelve la primera posición donde la encuentra
+return i; 
 }
 }
 
-return -1; // Si termina el ciclo y no la encontró
+return -1; 
 }
 
 int main() {
-string a = "oool";
+string a = "holaxd";
 string b = "hooola";
 
 int resultado = BuscarSubCadena(a, b);
